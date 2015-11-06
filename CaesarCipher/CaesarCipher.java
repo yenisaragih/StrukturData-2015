@@ -80,6 +80,17 @@ public class CaesarCipher
             }
         
     }
+    public static void main(String[] args){
+        try{
+            CaesarCipher baru = new CaesarCipher(3);
+            baru.enkripsi("yeni.txt","enkripsi.txt");
+            baru.dekripsi("yeni.txt","dekripsi.txt");
+        }
+        catch(IOException kesalahan){
+            System.out.printf("eror %s",kesalahan);
+        }
+
+    }
    
 
 }

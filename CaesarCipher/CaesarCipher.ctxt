@@ -5,4 +5,6 @@ comment1.params=sumber\ sasaran
 comment1.target=void\ enkripsi(java.lang.String,\ java.lang.String)
 comment2.params=sumber\ sasaran
 comment2.target=void\ dekripsi(java.lang.String,\ java.lang.String)
-numComments=3
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+numComments=4
