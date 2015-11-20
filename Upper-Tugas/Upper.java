@@ -3,15 +3,14 @@ import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.lang.String;
 /**
- * Write a description of class Upper here.
- * 
  * @author (Yeni H Saragih) 
- * @version (06 November 2015)
+ * @version (9 November 2015)
  */
-public class KopiBerkasBuffer
+public class Upper
 {  
-    public void kopi(String sumber, String sasaran) throws IOException {
+    public void upper(String sumber, String sasaran) throws IOException {
         // Deklarasi variabel
         FileInputStream masukan = null;
         FileOutputStream keluaran = null;
@@ -29,18 +28,19 @@ public class KopiBerkasBuffer
             int karakter = masukanBuffer.read();
             // Selama masih ada data yang masih bisa dibaca
             while (karakter != -1) {
-               
+                karakter = Character.toUpperCase(karakter);
                 keluaranBuffer.write(karakter);
                 karakter = masukanBuffer.read();
-            }
-        keluaranBuffer.flush();
+                        }
+            
+            keluaranBuffer.flush();
         } 
         catch (IOException kesalahan) {
             System.out.printf("Terjadi kesalahan: %s", kesalahan);
         }
         finally {
             // Tutup stream masukan
-            
+           
             if (masukanBuffer != null)
                 masukanBuffer.close();
            
@@ -48,7 +48,6 @@ public class KopiBerkasBuffer
                 keluaranBuffer.close();
             }
     }
-    
     
 }
 

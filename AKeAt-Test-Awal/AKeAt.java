@@ -1,17 +1,10 @@
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.lang.String;
 
-/**
- * Write a description of class KopiBerkas here.
- * 
- * @author (Yeni H Saragih) 
- * @version (06 November 2015)
- */
-public class KopiBerkas
-{
- 
-     public void kopi(String sumber, String sasaran) throws IOException {
+public class AKeAt {
+    public void aKeAt(String sumber, String sasaran) throws IOException {
         FileInputStream masukan = null;
         FileOutputStream keluaran = null;
         // Deklarasi variabel
@@ -24,12 +17,12 @@ public class KopiBerkas
             int karakter = masukan.read();
             // Selama masih ada data yang masih bisa dibaca
             while (karakter != -1) {
-                // Lakukan sesuatu dengan data yang dibaca => Tampikan
-                //System.out.print((char) karakter);
-                // Coba baca lagi dari stream
-                keluaran.write(karakter);
+                if (karakter=='a' || karakter=='A'){
+                   keluaran.write('@');
+                }else{
+                   keluaran.write(karakter);
+                }
                 karakter = masukan.read();
-                
             }
             keluaran.flush();
         } 
@@ -45,7 +38,4 @@ public class KopiBerkas
             }
         
     }
-    
-   
-
 }
