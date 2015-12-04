@@ -13,7 +13,7 @@ public class Client {
     public void chat(String namaDomain) 
                 throws UnknownHostException, IOException {
         // 0. Buka socket
-        koneksi = new Socket("192.168.43.75", 33333);
+        koneksi = new Socket("192.168.212.1", 33333);
 
         // Kirim perintah untuk informasi namaDomain
         kirimPerintah(namaDomain);

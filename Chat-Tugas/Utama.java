@@ -7,7 +7,7 @@ public class Utama {
         try {
             Scanner input = new Scanner(System.in);
             System.out.print("Yeni:");
-            String pesan = input.next();
+            String pesan = input.nextLine();
             
             Client kirim = new Client();
             kirim.chat(pesan);
