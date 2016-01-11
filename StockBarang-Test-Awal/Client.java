@@ -26,7 +26,7 @@ public class Client {
             String baris = null;
             // Ketik
             Scanner keyboard = new Scanner(System.in);
-            System.out.print("Masukkan Perintah : ");
+            System.out.print("Perintah anda : ");
             perintah = keyboard.nextLine();
             
             if(perintah.equalsIgnoreCase("TAMBAH")||perintah.equalsIgnoreCase("KURANG"))
@@ -49,7 +49,7 @@ public class Client {
                 keluaranBuff.flush();
                 
                 // Baca dari Server
-                System.out.print("Jumlah Stok Barang adalah ");
+                System.out.print("Jumlah = ");
                 masukan = new InputStreamReader(socket.getInputStream()); 
                 masukanBuff = new BufferedReader(masukan);
                 baris = masukanBuff.readLine();

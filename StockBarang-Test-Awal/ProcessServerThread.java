@@ -46,12 +46,12 @@ public class ProcessServerThread implements Runnable {
         if(baris.equalsIgnoreCase("TAMBAH"))
         {
             jumlah++;
-            System.out.println("Jumlah sekarang : "+jumlah);
+            System.out.println("Jumlah : "+jumlah);
         }
         else if(baris.equalsIgnoreCase("KURANG"))
         {
             jumlah--;
-            System.out.println("Jumlah sekarang : "+jumlah);
+            System.out.println("Jumlah : "+jumlah);
         }
         else if(baris.equalsIgnoreCase("JUMLAH"))
         {
